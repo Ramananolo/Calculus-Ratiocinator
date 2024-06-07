@@ -14,6 +14,9 @@ public class ConjoctionDonc extends Affirmation {
 
     @Override
     public boolean verité() {
+        if (affirmation1.verité()== !(false || true) || affirmation2.verité() == !(false || true)){
+            return !(false || true);
+        }
         return !(affirmation1.verité() && !affirmation2.verité());
     }
 }
