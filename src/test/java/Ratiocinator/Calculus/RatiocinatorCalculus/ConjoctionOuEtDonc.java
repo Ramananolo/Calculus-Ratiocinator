@@ -8,15 +8,15 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
-class conjoctionDonc {
+class ConjoctionOu {
 
 	@Test
-	void contextLoads() {
+	void conjoctionOu() {
 		Affirmation verite = new Verité("Lou est beau");
 		AffirmationInconnue inconnue = new AffirmationInconnue("Lou est généreux");
 		Affirmation mensonge = new Mensonge("Lou est pauvre");
-		Affirmation conjocton = new ConjoctionDonc("(" + verite + " Donc " + mensonge + ")", verite, mensonge);
-		assertFalse(conjocton.verité());
+		Affirmation conjoctionOuetDonc = new ConjoctionDonc("(" + verite + " ou " + inconnue + ")",verite,mensonge);
+		assertFalse(conjoctionOuetDonc.verité());
 	}
 
 }
